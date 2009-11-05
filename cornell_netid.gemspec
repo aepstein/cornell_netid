@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cornell_netid}
-  s.version = "0.0.0"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ari Epstein"]
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "cornell_netid.gemspec",
      "lib/core_extensions/string.rb",
      "lib/cornell_netid.rb",
      "spec/cornell_netid_spec.rb",
