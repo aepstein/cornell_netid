@@ -1,9 +1,10 @@
 = cornell_netid
 
-Description goes here.
+Toolkit for handling Cornell University Net Ids.  Extends the String class
+with several methods that make it easier to parse net ids.
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
@@ -16,3 +17,4 @@ Description goes here.
 == Copyright
 
 Copyright (c) 2009 Ari Epstein. See LICENSE for details.
+

@@ -9,18 +9,13 @@ module CornellNetid::CoreExtensions
     end
 
     def to_net_id
-      self[CornellNetid::VALID_NET_ID_WITH_EMAIL,1]
+      self.strip.downcase[CornellNetid::VALID_NET_ID_WITH_EMAIL,1]
     end
 
     def to_net_id!
-      return true if self.valid_net_id?
-      self.strip!
-      begin
-        self[CornellNetid::VALID_NET_ID_WITH_EMAIL,2] = ''
-      rescue IndexError
-        raise CornellNetid::InvalidNetidError unless self.valid_net_id?
-      end
-      true
+      id = self.to_net_id
+      raise CornellNetid::InvalidNetidError if id.nil?
+      self[self] = id unless self == id
     end
 
     def valid_net_id?
