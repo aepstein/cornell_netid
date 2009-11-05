@@ -16,12 +16,13 @@ describe "CornellNetid" do
   it "adds to_net_id instance method to String" do
     @valid.to_net_id.should eql 'zzz1'
     @valid_email.to_net_id.should eql 'ate2'
+    @valid_email.upcase.to_net_id.should eql 'ate2'
     @invalid.to_net_id.should be_nil
     @invalid_email.to_net_id.should be_nil
   end
 
   it "adds to_net_ids instance method to String" do
-    [ ' ', ';', '/', ',' ].each do |s|
+    [ ' ', ';', '/', ',', '\\', ':' ].each do |s|
       result = "#{@valid}#{s}#{@invalid}#{s}#{@valid_email}#{s}#{@invalid_email}".to_net_ids
       result.size.should eql 2
       result.should include 'zzz1'

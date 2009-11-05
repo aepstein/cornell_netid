@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "cornell_netid"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Cornell Net Id Extensions}
+    gem.description = %Q{Toolkit for handling Cornell University Net Ids.  Extends the String class with several methods that make it easier to parse net ids.}
     gem.email = "aepstein607@gmail.com"
     gem.homepage = "http://github.com/aepstein/cornell_netid"
     gem.authors = ["Ari Epstein"]
@@ -43,3 +43,4 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
